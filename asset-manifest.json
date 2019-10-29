@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/mobx-antd-materialui/static/css/main.dff7aee2.chunk.css",
-    "main.js": "/mobx-antd-materialui/static/js/main.a61b4673.chunk.js",
-    "main.js.map": "/mobx-antd-materialui/static/js/main.a61b4673.chunk.js.map",
+    "main.css": "/mobx-antd-materialui/static/css/main.956cc166.chunk.css",
+    "main.js": "/mobx-antd-materialui/static/js/main.fea67135.chunk.js",
+    "main.js.map": "/mobx-antd-materialui/static/js/main.fea67135.chunk.js.map",
     "runtime-main.js": "/mobx-antd-materialui/static/js/runtime-main.cfa78b0c.js",
     "runtime-main.js.map": "/mobx-antd-materialui/static/js/runtime-main.cfa78b0c.js.map",
-    "static/css/2.96ba8f46.chunk.css": "/mobx-antd-materialui/static/css/2.96ba8f46.chunk.css",
-    "static/js/2.89a9b54c.chunk.js": "/mobx-antd-materialui/static/js/2.89a9b54c.chunk.js",
-    "static/js/2.89a9b54c.chunk.js.map": "/mobx-antd-materialui/static/js/2.89a9b54c.chunk.js.map",
+    "static/css/2.f9db8bcf.chunk.css": "/mobx-antd-materialui/static/css/2.f9db8bcf.chunk.css",
+    "static/js/2.4066e86e.chunk.js": "/mobx-antd-materialui/static/js/2.4066e86e.chunk.js",
+    "static/js/2.4066e86e.chunk.js.map": "/mobx-antd-materialui/static/js/2.4066e86e.chunk.js.map",
     "index.html": "/mobx-antd-materialui/index.html",
-    "precache-manifest.c215f140cc3b8aca9eb5ae58b71b51ff.js": "/mobx-antd-materialui/precache-manifest.c215f140cc3b8aca9eb5ae58b71b51ff.js",
+    "precache-manifest.62b336f059284ab8682201f6a62f5d4f.js": "/mobx-antd-materialui/precache-manifest.62b336f059284ab8682201f6a62f5d4f.js",
     "service-worker.js": "/mobx-antd-materialui/service-worker.js",
-    "static/css/2.96ba8f46.chunk.css.map": "/mobx-antd-materialui/static/css/2.96ba8f46.chunk.css.map",
-    "static/css/main.dff7aee2.chunk.css.map": "/mobx-antd-materialui/static/css/main.dff7aee2.chunk.css.map",
+    "static/css/2.f9db8bcf.chunk.css.map": "/mobx-antd-materialui/static/css/2.f9db8bcf.chunk.css.map",
+    "static/css/main.956cc166.chunk.css.map": "/mobx-antd-materialui/static/css/main.956cc166.chunk.css.map",
     "static/media/logo.svg": "/mobx-antd-materialui/static/media/logo.25bf045c.svg",
     "static/media/the-hari-logo.png": "/mobx-antd-materialui/static/media/the-hari-logo.99fd3c1b.png",
     "static/media/to-do-list.png": "/mobx-antd-materialui/static/media/to-do-list.9d4bc7b7.png"
   },
   "entrypoints": [
     "static/js/runtime-main.cfa78b0c.js",
-    "static/css/2.96ba8f46.chunk.css",
-    "static/js/2.89a9b54c.chunk.js",
-    "static/css/main.dff7aee2.chunk.css",
-    "static/js/main.a61b4673.chunk.js"
+    "static/css/2.f9db8bcf.chunk.css",
+    "static/js/2.4066e86e.chunk.js",
+    "static/css/main.956cc166.chunk.css",
+    "static/js/main.fea67135.chunk.js"
   ]
 }
