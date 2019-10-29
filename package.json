@@ -2,7 +2,7 @@
   "name": "stayplease-web-console",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://delunix.github.io/stayplease-web-console",
+  "homepage": "https://delunix.github.io/mobx-antd-materialui/",
   "dependencies": {
     "@material-ui/core": "^4.5.1",
     "@material-ui/icons": "^4.5.1",
@@ -23,6 +23,8 @@
     "recharts": "^1.8.5"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
@@ -44,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-decorators": "^7.6.0"
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "gh-pages": "^2.1.1"
   }
 }
