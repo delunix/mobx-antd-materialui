@@ -23,11 +23,12 @@ import Deposits from './Deposits';
 import Orders from './Orders';
 
 import './dashboard.css';
-import { Button, Icon, Input, AutoComplete, Tabs, Table } from 'antd';
+import { Button, Icon, Input, AutoComplete, Tabs, Table, Badge as BadgeAntd, Radio, Select } from 'antd';
 
 import logo from '../../assets/the-hari-logo.png';
 import logoSquare from '../../assets/the-hari-logo-square.png';
 import todoImg from '../../assets/to-do-list.png';
+import timelineImg from '../../assets/timelines.png';
 
 import noteIcon from '../../assets/icons/note.png';
 import recordIcon from '../../assets/icons/record.png';
@@ -246,49 +247,49 @@ const columns = [
 const data = [
   {
     key: '1',
-    agent: 'Restaurant',
+    agent: <BadgeAntd status="processing" text="Restaurant"/>,
     name: 'Nathan Russel',
     ext: '402',
   },
   {
     key: '2',
-    agent: 'Spa',
+    agent: <BadgeAntd status="success" text="Spa"/>,
     name: 'Wade Mccoy',
     ext: '212',
   },
   {
     key: '3',
-    agent: 'Engineer',
+    agent: <BadgeAntd status="warning" text="Engineer"/>,
     name: 'Eduardo Wilson',
     ext: '602',
   },
   {
     key: '4',
-    agent: 'Manager',
+    agent: <BadgeAntd status="processing" text="Manager"/>,
     name: 'Greg Hawkins',
     ext: '889',
   },
   {
     key: '5',
-    agent: 'Restaurant',
+    agent: <BadgeAntd status="success" text="Restaurant"/>,
     name: 'Darlene Fox',
     ext: '405',
   },
   {
     key: '6',
-    agent: 'Sale',
+    agent: <BadgeAntd status="default" text="Sale"/>,
     name: 'Irma Mckinney',
     ext: '102',
   },
   {
     key: '7',
-    agent: 'Spa',
+    agent: <BadgeAntd status="default" text="Spa"/>,
     name: 'Minami Kojima',
     ext: '666',
   },
   {
     key: '8',
-    agent: 'Manager',
+    agent: <BadgeAntd status="error" text="Sale"/>,
     name: 'Darlene Fox',
     ext: '405',
   }
@@ -312,19 +313,19 @@ const callStatusColumns = [
 const callStatusData = [
   {
     key: '1',
-    number: 'Rm 402',
+    number: <BadgeAntd status="success" text="Rm 402"/>,
     name: 'Mr. Wang Lee',
     duration: '00:16:43',
   },
   {
     key: '2',
-    number: '(808) 555-0111',
+    number: <BadgeAntd status="warning" text="(808) 555-0111"/>,
     name: 'Tyrone Nguyen',
     duration: '00:01:30',
   },
   {
     key: '3',
-    number: '108',
+    number: <BadgeAntd status="warning" text="108"/>,
     name: 'Arlene Mccoy',
     duration: '00:02:40',
   }
@@ -438,7 +439,8 @@ export default function DashboardPage() {
               <Paper className={callConsoleHeightPaper}>
                 <Grid container spacing={1}>
                     <Grid item xs={12} md={6} lg={6}>
-                      <img src={logoSquare} className="App-logo" alt="logo" style={{width: 120, height: 120, marginTop: -15, marginLeft: 20}}/>
+                      <img src={logo} className="App-logo" alt="logo" style={{height: 12, marginLeft: 30, marginTop:35}}/>
+                      {/* <img src={logo} className="App-logo" alt="logo" style={{width: 120, height: 120, marginTop: -15, marginLeft: 20}}/> */}
                     </Grid>
                     <Grid item xs={12} md={6} lg={6}>
                       <div style={{padding:22, marginLeft:80}}>
@@ -517,7 +519,20 @@ export default function DashboardPage() {
               <Paper className={fixedHeightPaper}>
                 <Tabs defaultActiveKey="1" onChange={callback}>
                   <TabPane tab="Activity" key="1">
-                    Content of Tab Pane 1
+                  <div>
+                    <Radio.Group defaultValue="a" buttonStyle="solid">
+                      <Radio.Button value="a">All</Radio.Button>
+                      <Radio.Button value="b">Notes</Radio.Button>
+                      <Radio.Button value="c">Task</Radio.Button>
+                      <Radio.Button value="d">Calls</Radio.Button>
+                    </Radio.Group>
+                    <Select defaultValue="Today" style={{ width: 100, float:'right' }}>
+                      <Option value="jack">Today</Option>
+                    </Select>
+                  </div>
+                  <div>
+                    <img src={timelineImg} style={{width:'100%'}}/>
+                  </div>
                   </TabPane>
                   <TabPane tab="Info" key="2">
                     Content of Tab Pane 2
