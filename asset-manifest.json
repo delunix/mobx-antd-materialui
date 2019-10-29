@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mobx-antd-materialui/static/css/main.dff7aee2.chunk.css",
-    "main.js": "/mobx-antd-materialui/static/js/main.5e1d79de.chunk.js",
-    "main.js.map": "/mobx-antd-materialui/static/js/main.5e1d79de.chunk.js.map",
+    "main.js": "/mobx-antd-materialui/static/js/main.a61b4673.chunk.js",
+    "main.js.map": "/mobx-antd-materialui/static/js/main.a61b4673.chunk.js.map",
     "runtime-main.js": "/mobx-antd-materialui/static/js/runtime-main.cfa78b0c.js",
     "runtime-main.js.map": "/mobx-antd-materialui/static/js/runtime-main.cfa78b0c.js.map",
     "static/css/2.96ba8f46.chunk.css": "/mobx-antd-materialui/static/css/2.96ba8f46.chunk.css",
-    "static/js/2.02ffa55e.chunk.js": "/mobx-antd-materialui/static/js/2.02ffa55e.chunk.js",
-    "static/js/2.02ffa55e.chunk.js.map": "/mobx-antd-materialui/static/js/2.02ffa55e.chunk.js.map",
+    "static/js/2.89a9b54c.chunk.js": "/mobx-antd-materialui/static/js/2.89a9b54c.chunk.js",
+    "static/js/2.89a9b54c.chunk.js.map": "/mobx-antd-materialui/static/js/2.89a9b54c.chunk.js.map",
     "index.html": "/mobx-antd-materialui/index.html",
-    "precache-manifest.8e4f8296202a53cf3d0b990ec0df7025.js": "/mobx-antd-materialui/precache-manifest.8e4f8296202a53cf3d0b990ec0df7025.js",
+    "precache-manifest.c215f140cc3b8aca9eb5ae58b71b51ff.js": "/mobx-antd-materialui/precache-manifest.c215f140cc3b8aca9eb5ae58b71b51ff.js",
     "service-worker.js": "/mobx-antd-materialui/service-worker.js",
     "static/css/2.96ba8f46.chunk.css.map": "/mobx-antd-materialui/static/css/2.96ba8f46.chunk.css.map",
     "static/css/main.dff7aee2.chunk.css.map": "/mobx-antd-materialui/static/css/main.dff7aee2.chunk.css.map",
@@ -20,8 +20,8 @@
   "entrypoints": [
     "static/js/runtime-main.cfa78b0c.js",
     "static/css/2.96ba8f46.chunk.css",
-    "static/js/2.02ffa55e.chunk.js",
+    "static/js/2.89a9b54c.chunk.js",
     "static/css/main.dff7aee2.chunk.css",
-    "static/js/main.5e1d79de.chunk.js"
+    "static/js/main.a61b4673.chunk.js"
   ]
 }
