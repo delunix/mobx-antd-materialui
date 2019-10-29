@@ -14,7 +14,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Switch>
             <Route path="/dashboard" component={DashboardPage} />
-            <Route path="/" component={InitPage} />
+            <Route path="/" component={DashboardPage} />
       </Switch>
     </ThemeProvider>
 
