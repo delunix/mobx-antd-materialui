@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mobx-antd-materialui/precache-manifest.e376df4b127986e82783fd051212b936.js"
+  "/mobx-antd-materialui/precache-manifest.4fcf412fdefe994fa7395d49f360402c.js"
 );
 
 self.addEventListener('message', (event) => {
