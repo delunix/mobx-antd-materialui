@@ -29,6 +29,17 @@ import logo from '../../assets/the-hari-logo.png';
 import logoSquare from '../../assets/the-hari-logo-square.png';
 import todoImg from '../../assets/to-do-list.png';
 
+import noteIcon from '../../assets/icons/note.png';
+import recordIcon from '../../assets/icons/record.png';
+import muteIcon from '../../assets/icons/mute.png';
+
+import keypadIcon from '../../assets/icons/keypad.png';
+import parkIcon from '../../assets/icons/park.png';
+import pauseIcon from '../../assets/icons/pause.png';
+import forwardIcon from '../../assets/icons/forward.png';
+import contactListIcon from '../../assets/icons/contact-list.png';
+import endCallIcon from '../../assets/icons/end-call.png';
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -425,7 +436,47 @@ export default function DashboardPage() {
           <Grid container spacing={3}>
             <Grid item xs={12} md={12} lg={12}>
               <Paper className={callConsoleHeightPaper}>
-                <img src={logoSquare} className="App-logo" alt="logo" style={{width: 120, height: 120, marginTop: -15, marginLeft: 20}}/>
+                <Grid container spacing={1}>
+                    <Grid item xs={12} md={6} lg={6}>
+                      <img src={logoSquare} className="App-logo" alt="logo" style={{width: 120, height: 120, marginTop: -15, marginLeft: 20}}/>
+                    </Grid>
+                    <Grid item xs={12} md={6} lg={6}>
+                      <div style={{padding:22, marginLeft:80}}>
+                        <Button shape="circle" style={{marginRight:10}}>
+                          <img src={noteIcon} style={{padding:5}}/>
+                        </Button>
+                        <Button shape="circle" style={{marginRight:10}}>
+                          <img src={recordIcon} style={{padding:5}}/>
+                        </Button>
+                        <Button shape="circle" style={{marginRight:10}}>
+                          <img src={muteIcon} style={{padding:5}}/>
+                        </Button>
+                        
+                        <span className="big-button">
+                          <Button shape="circle" style={{marginRight:10}}>
+                            <img src={keypadIcon} style={{padding:5}}/>
+                          </Button>
+                          <Button shape="circle" style={{marginRight:10}}>
+                            <img src={parkIcon} style={{padding:5}}/>
+                          </Button>
+                          <Button shape="circle" style={{marginRight:10}}>
+                            <img src={pauseIcon} style={{padding:5}}/>
+                          </Button>
+                          <Button shape="circle" style={{marginRight:10}}>
+                            <img src={forwardIcon} style={{padding:5}}/>
+                          </Button>
+                          <Button shape="circle" style={{marginRight:10}}>
+                            <img src={contactListIcon} style={{padding:5}}/>
+                          </Button>
+
+                          <Button type="danger" shape="circle" style={{marginRight:10, marginLeft:30}}>
+                            <img src={endCallIcon} style={{padding:5}}/>
+                          </Button>
+                        </span>
+                        
+                      </div>
+                    </Grid>
+                </Grid>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={4}>
