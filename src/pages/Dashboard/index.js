@@ -29,6 +29,7 @@ import logo from '../../assets/the-hari-logo.png';
 import logoSquare from '../../assets/the-hari-logo-square.png';
 import todoImg from '../../assets/to-do-list.png';
 import timelineImg from '../../assets/timelines.png';
+import callConsoleHeadingImg from '../../assets/call-console-heading.png';
 
 import noteIcon from '../../assets/icons/note.png';
 import recordIcon from '../../assets/icons/record.png';
@@ -146,13 +147,13 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
   },
   fixedHeight: {
-    height: 570,
+    height: 505,
   },
   callConsoleHeight: {
     height: 80,
   },
   callStatusHeight: {
-    height: 273,
+    height: 240,
   }
 }));
 
@@ -286,12 +287,6 @@ const data = [
     agent: <BadgeAntd status="default" text="Spa"/>,
     name: 'Minami Kojima',
     ext: '666',
-  },
-  {
-    key: '8',
-    agent: <BadgeAntd status="error" text="Sale"/>,
-    name: 'Darlene Fox',
-    ext: '405',
   }
 ];
 
@@ -440,7 +435,7 @@ export default function DashboardPage() {
                 <Grid container spacing={1}>
                     <Grid item xs={12} md={6} lg={6}>
                       <img src={logo} className="App-logo" alt="logo" style={{height: 12, marginLeft: 30, marginTop:35}}/>
-                      {/* <img src={logo} className="App-logo" alt="logo" style={{width: 120, height: 120, marginTop: -15, marginLeft: 20}}/> */}
+                      <img src={callConsoleHeadingImg} style={{height:81, marginLeft:'27%', marginTop:'-8%'}}/>
                     </Grid>
                     <Grid item xs={12} md={6} lg={6}>
                       <div style={{padding:22, marginLeft:80}}>
@@ -501,7 +496,7 @@ export default function DashboardPage() {
                 </div>
                 <Tabs defaultActiveKey="1" onChange={callback}>
                   <TabPane tab="All" key="1">
-                    <Table columns={columns} dataSource={data} size="small" />
+                    <Table columns={columns} dataSource={data} size="small" pagination={false} />
                   </TabPane>
                   <TabPane tab="Restaurant" key="2">
                     Content of Tab Pane 2
@@ -546,7 +541,7 @@ export default function DashboardPage() {
                   <Paper className={callStatusHeightPaper}>
                     <Tabs defaultActiveKey="1" onChange={callback}>
                       <TabPane tab="Current (3)" key="1">
-                        <Table columns={callStatusColumns} dataSource={callStatusData} size="small" />
+                        <Table columns={callStatusColumns} dataSource={callStatusData} size="small" pagination={false}/>
                       </TabPane>
                       <TabPane tab="Call Park (4)" key="2">
                         Content of Tab Pane 2
@@ -561,7 +556,7 @@ export default function DashboardPage() {
                   <Paper className={callStatusHeightPaper}>
                     <Tabs defaultActiveKey="1" onChange={callback}>
                       <TabPane tab="Call Log" key="1">
-                        <Table columns={callLogColumns} dataSource={callLogData} size="small" />
+                        <Table columns={callLogColumns} dataSource={callLogData} size="small" pagination={false}/>
                       </TabPane>
                     </Tabs>
                   </Paper>
