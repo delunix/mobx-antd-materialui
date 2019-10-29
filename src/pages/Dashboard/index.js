@@ -116,7 +116,7 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: theme.spacing(4),
   },
   paper: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(1),
     display: 'flex',
     overflow: 'auto',
     flexDirection: 'column',
@@ -430,8 +430,8 @@ export default function DashboardPage() {
             </Grid>
             <Grid item xs={12} md={4} lg={4}>
               <Paper className={fixedHeightPaper}>
-                <div style={{fontWeight:"bold", marginBottom:10}}>Directory</div>
-                <div className="certain-category-search-wrapper" style={{ width: "100%", marginBottom:10 }}>
+                <div style={{fontWeight:"bold", padding: 10}}>Directory</div>
+                <div className="certain-category-search-wrapper" style={{ width: "95%", marginLeft:10, marginBottom:10 }}>
                   <AutoComplete
                     className="certain-category-search"
                     dropdownClassName="certain-category-search-dropdown"
@@ -464,7 +464,14 @@ export default function DashboardPage() {
             </Grid>
             <Grid item xs={12} md={4} lg={4}>
               <Paper className={fixedHeightPaper}>
-                <div style={{fontWeight:"bold"}}>Activity</div>
+                <Tabs defaultActiveKey="1" onChange={callback}>
+                  <TabPane tab="Activity" key="1">
+                    Content of Tab Pane 1
+                  </TabPane>
+                  <TabPane tab="Info" key="2">
+                    Content of Tab Pane 2
+                  </TabPane>
+                </Tabs>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={4}>
