@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3c737f483d18f4145cb99f8e545658d6",
+    "revision": "ab6d402abac6d103a818f802a1f700ca",
     "url": "/mobx-antd-materialui/index.html"
   },
   {
