@@ -23,7 +23,7 @@ import Deposits from './Deposits';
 import Orders from './Orders';
 
 import './dashboard.css';
-import { Button, Icon, Input, AutoComplete, Tabs } from 'antd';
+import { Button, Icon, Input, AutoComplete, Tabs, Table } from 'antd';
 
 import logo from '../../assets/the-hari-logo.png';
 import logoSquare from '../../assets/the-hari-logo-square.png';
@@ -127,14 +127,20 @@ const useStyles = makeStyles(theme => ({
     overflow: 'auto',
     flexDirection: 'column',
   },
+  callLogPaper:{
+    padding: theme.spacing(1),
+    display: 'flex',
+    overflow: 'auto',
+    flexDirection: 'column',
+  },
   fixedHeight: {
-    height: 450,
+    height: 570,
   },
   callConsoleHeight: {
     height: 80,
   },
   callStatusHeight: {
-    height: 213,
+    height: 273,
   }
 }));
 
@@ -211,6 +217,144 @@ const options = dataSource
     </Option>,
   ]);
 
+const columns = [
+  {
+    title: 'AGENT',
+    dataIndex: 'agent',
+  },
+  {
+    title: 'NAME',
+    dataIndex: 'name',
+  },
+  {
+    title: 'EXT',
+    dataIndex: 'ext',
+  },
+];
+
+const data = [
+  {
+    key: '1',
+    agent: 'Restaurant',
+    name: 'Nathan Russel',
+    ext: '402',
+  },
+  {
+    key: '2',
+    agent: 'Spa',
+    name: 'Wade Mccoy',
+    ext: '212',
+  },
+  {
+    key: '3',
+    agent: 'Engineer',
+    name: 'Eduardo Wilson',
+    ext: '602',
+  },
+  {
+    key: '4',
+    agent: 'Manager',
+    name: 'Greg Hawkins',
+    ext: '889',
+  },
+  {
+    key: '5',
+    agent: 'Restaurant',
+    name: 'Darlene Fox',
+    ext: '405',
+  },
+  {
+    key: '6',
+    agent: 'Sale',
+    name: 'Irma Mckinney',
+    ext: '102',
+  },
+  {
+    key: '7',
+    agent: 'Spa',
+    name: 'Minami Kojima',
+    ext: '666',
+  },
+  {
+    key: '8',
+    agent: 'Manager',
+    name: 'Darlene Fox',
+    ext: '405',
+  }
+];
+
+const callStatusColumns = [
+  {
+    title: 'NUMBER',
+    dataIndex: 'number',
+  },
+  {
+    title: 'NAME',
+    dataIndex: 'name',
+  },
+  {
+    title: 'DURATION',
+    dataIndex: 'duration',
+  },
+];
+
+const callStatusData = [
+  {
+    key: '1',
+    number: 'Rm 402',
+    name: 'Mr. Wang Lee',
+    duration: '00:16:43',
+  },
+  {
+    key: '2',
+    number: '(808) 555-0111',
+    name: 'Tyrone Nguyen',
+    duration: '00:01:30',
+  },
+  {
+    key: '3',
+    number: '108',
+    name: 'Arlene Mccoy',
+    duration: '00:02:40',
+  }
+];
+
+const callLogColumns = [
+  {
+    title: 'DATE TIME',
+    dataIndex: 'datetime',
+  },
+  {
+    title: 'FROM',
+    dataIndex: 'from',
+  },
+  {
+    title: 'TO',
+    dataIndex: 'to',
+  },
+];
+
+const callLogData = [
+  {
+    key: '1',
+    datetime: '11:56 PM',
+    from: 'You',
+    to: 'Rm 402',
+  },
+  {
+    key: '2',
+    datetime: '3:00 AM',
+    from: 'Jennie Simmons',
+    to: 'Rm 402',
+  },
+  {
+    key: '3',
+    datetime: '3:41 PM',
+    from: 'Rm 402',
+    to: 'You',
+  }
+];
+
 export default function DashboardPage() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
@@ -222,7 +366,7 @@ export default function DashboardPage() {
   };
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
   const callConsoleHeightPaper = clsx(classes.smallPaper, classes.callConsoleHeight);
-  const callStatusHeightPaper = clsx(classes.paper, classes.callStatusHeight);
+  const callStatusHeightPaper = clsx(classes.callLogPaper, classes.callStatusHeight);
 
   const callback = (key) => {
     console.log(key);
@@ -296,7 +440,7 @@ export default function DashboardPage() {
                     size="large"
                     style={{ width: '100%' }}
                     dataSource={options}
-                    placeholder="input here"
+                    placeholder="Search Contact"
                     optionLabelProp="value"
                   >
                     <Input suffix={<Icon type="search" className="certain-category-icon" />} />
@@ -304,7 +448,7 @@ export default function DashboardPage() {
                 </div>
                 <Tabs defaultActiveKey="1" onChange={callback}>
                   <TabPane tab="All" key="1">
-                    Content of Tab Pane 1
+                    <Table columns={columns} dataSource={data} size="small" />
                   </TabPane>
                   <TabPane tab="Restaurant" key="2">
                     Content of Tab Pane 2
@@ -327,12 +471,26 @@ export default function DashboardPage() {
               <Grid container spacing={3}>
                 <Grid item xs={12} md={12} lg={12}>
                   <Paper className={callStatusHeightPaper}>
-                    <div style={{fontWeight:"bold"}}>Call Status</div>
+                    <Tabs defaultActiveKey="1" onChange={callback}>
+                      <TabPane tab="Current (3)" key="1">
+                        <Table columns={callStatusColumns} dataSource={callStatusData} size="small" />
+                      </TabPane>
+                      <TabPane tab="Call Park (4)" key="2">
+                        Content of Tab Pane 2
+                      </TabPane>
+                      <TabPane tab="Call Back (1)" key="3">
+                        Content of Tab Pane 3
+                      </TabPane>
+                    </Tabs>
                   </Paper>
                 </Grid>
                 <Grid item xs={12} md={12} lg={12}>
                   <Paper className={callStatusHeightPaper}>
-                    <div style={{fontWeight:"bold"}}>Call Logs</div>
+                    <Tabs defaultActiveKey="1" onChange={callback}>
+                      <TabPane tab="Call Log" key="1">
+                        <Table columns={callLogColumns} dataSource={callLogData} size="small" />
+                      </TabPane>
+                    </Tabs>
                   </Paper>
                 </Grid>
               </Grid>
