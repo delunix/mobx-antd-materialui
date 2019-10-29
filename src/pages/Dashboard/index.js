@@ -159,40 +159,31 @@ const useStyles = makeStyles(theme => ({
 
 const dataSource = [
   {
-    title: 'Libraries',
+    title: 'Restaurant',
     children: [
       {
-        title: 'AntDesign',
-        count: 10000,
+        title: 'Nathan Russel',
+        count: 402,
       },
       {
-        title: 'AntDesign UI',
-        count: 10600,
+        title: 'Darlene Fox',
+        count: 405,
       },
     ],
   },
   {
-    title: 'Solutions',
+    title: 'Spa',
     children: [
       {
-        title: 'AntDesign UI',
-        count: 60100,
+        title: 'Minami Kojima',
+        count: 666,
       },
       {
-        title: 'AntDesign',
-        count: 30010,
+        title: 'Irma Mckinney',
+        count: 102,
       },
     ],
-  },
-  {
-    title: 'Articles',
-    children: [
-      {
-        title: 'AntDesign design language',
-        count: 100000,
-      },
-    ],
-  },
+  }
 ];
 
 function renderTitle(title) {
@@ -217,7 +208,7 @@ const options = dataSource
       {group.children.map(opt => (
         <Option key={opt.title} value={opt.title}>
           {opt.title}
-          <span className="certain-search-item-count">{opt.count} people</span>
+          <span className="certain-search-item-count">EXT: {opt.count}</span>
         </Option>
       ))}
     </OptGroup>
