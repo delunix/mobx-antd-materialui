@@ -251,19 +251,19 @@ const data = [
   },
   {
     key: '2',
-    agent: <BadgeAntd status="success" text="Spa"/>,
+    agent: <BadgeAntd status="processing" text="Spa"/>,
     name: 'Wade Mccoy',
     ext: '212',
   },
   {
     key: '3',
-    agent: <BadgeAntd status="warning" text="Engineer"/>,
+    agent: <BadgeAntd status="processing" text="Engineer"/>,
     name: 'Eduardo Wilson',
     ext: '602',
   },
   {
     key: '4',
-    agent: <BadgeAntd status="processing" text="Manager"/>,
+    agent: <BadgeAntd status="success" text="Manager"/>,
     name: 'Greg Hawkins',
     ext: '889',
   },
@@ -275,7 +275,7 @@ const data = [
   },
   {
     key: '6',
-    agent: <BadgeAntd status="default" text="Sale"/>,
+    agent: <BadgeAntd status="warning" text="Sale"/>,
     name: 'Irma Mckinney',
     ext: '102',
   },
@@ -496,9 +496,6 @@ export default function DashboardPage() {
                     </Grid>
                     <Grid item xs={12} md={6} lg={6}>
                       <div style={{padding:22, marginLeft:80}}>
-                        <Button shape="circle" style={{marginRight:10}}>
-                          <img src={noteIcon} style={{padding:5}}/>
-                        </Button>
                         <Button shape="circle" style={{marginRight:10}}>
                           <img src={recordIcon} style={{padding:5}}/>
                         </Button>
