@@ -48,6 +48,8 @@ import contactListIcon from '../../assets/icons/contact-list.png';
 import endCallIcon from '../../assets/icons/end-call.png';
 
 import avatarImg from '../../assets/1.jpg';
+import cloudImg from '../../assets/cloud.png';
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -421,6 +423,13 @@ export default function DashboardPage() {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             <img src={logo} className="App-logo" alt="logo" style={{height: 17}}/>
           </Typography>
+
+          <img src={cloudImg} style={{height: 11, marginRight:7}}/>
+          <div style={{marginRight:10, color:"gray"}}>
+            Cloudy 23&#8451;
+          </div>
+
+          <DividerAntd type="vertical"/>
 
           <div style={{marginRight:10, color:"gray"}}>
             Wed, 30 Oct 2019
