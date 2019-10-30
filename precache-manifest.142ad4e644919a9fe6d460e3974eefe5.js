@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "70ee6c30eb971070abf3b30618573c95",
+    "revision": "e2ef24cdc8f13aa01db3ac686cb5790c",
     "url": "/mobx-antd-materialui/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mobx-antd-materialui/static/css/2.e0a7c88e.chunk.css"
   },
   {
-    "revision": "a3a4fb91f89ca24d4446",
+    "revision": "6d287b66c1149525710e",
     "url": "/mobx-antd-materialui/static/css/main.ef6e408d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mobx-antd-materialui/static/js/2.66ddff30.chunk.js"
   },
   {
-    "revision": "a3a4fb91f89ca24d4446",
-    "url": "/mobx-antd-materialui/static/js/main.fc060d5b.chunk.js"
+    "revision": "6d287b66c1149525710e",
+    "url": "/mobx-antd-materialui/static/js/main.94544c7c.chunk.js"
   },
   {
     "revision": "8f7063a8db127abcf588",
