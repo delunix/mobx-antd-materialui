@@ -19,34 +19,24 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
 import Box from '@material-ui/core/Box';
-import { withStyles } from '@material-ui/core/styles';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Avatar from '@material-ui/core/Avatar';
 
-import Chart from './Chart';
-import Deposits from './Deposits';
-import Orders from './Orders';
+import { Button as ButtonAntd, Icon, Input, AutoComplete, Tabs, Table, Badge as BadgeAntd, Radio, Select, Divider as DividerAntd } from 'antd';
 
 import './dashboard.css';
-import { Button, Icon, Input, AutoComplete, Tabs, Table, Badge as BadgeAntd, Radio, Select, Divider as DividerAntd } from 'antd';
-
+import { withStyles } from '@material-ui/core/styles';
 import logo from '../../assets/the-hari-logo.png';
-import logoSquare from '../../assets/the-hari-logo-square.png';
 import todoImg from '../../assets/to-do-list.png';
 import timelineImg from '../../assets/timelines.png';
 import callConsoleHeadingImg from '../../assets/call-console-heading.png';
-
-import noteIcon from '../../assets/icons/note.png';
 import recordIcon from '../../assets/icons/record.png';
 import muteIcon from '../../assets/icons/mute.png';
-
 import keypadIcon from '../../assets/icons/keypad.png';
 import parkIcon from '../../assets/icons/park.png';
 import pauseIcon from '../../assets/icons/pause.png';
 import forwardIcon from '../../assets/icons/forward.png';
 import contactListIcon from '../../assets/icons/contact-list.png';
 import endCallIcon from '../../assets/icons/end-call.png';
-
 import avatarImg from '../../assets/1.jpg';
 import cloudImg from '../../assets/cloud.png';
 
@@ -72,8 +62,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
   },
   toolbar: {
-    paddingRight: 24,
-    //paddingLeft: 16 // keep right padding when drawer closed
+    paddingRight: 24
   },
   toolbarIcon: {
     display: 'flex',
@@ -505,33 +494,33 @@ export default function DashboardPage() {
                     </Grid>
                     <Grid item xs={12} md={6} lg={6}>
                       <div style={{padding:22, marginLeft:80}}>
-                        <Button shape="circle" style={{marginRight:10}}>
+                        <ButtonAntd shape="circle" style={{marginRight:10}}>
                           <img src={recordIcon} style={{padding:5}}/>
-                        </Button>
-                        <Button shape="circle" style={{marginRight:10}}>
+                        </ButtonAntd>
+                        <ButtonAntd shape="circle" style={{marginRight:10}}>
                           <img src={muteIcon} style={{padding:5}}/>
-                        </Button>
+                        </ButtonAntd>
                         
                         <span className="big-button">
-                          <Button shape="circle" style={{marginRight:10}}>
+                          <ButtonAntd shape="circle" style={{marginRight:10}}>
                             <img src={keypadIcon} style={{padding:5}}/>
-                          </Button>
-                          <Button shape="circle" style={{marginRight:10}}>
+                          </ButtonAntd>
+                          <ButtonAntd shape="circle" style={{marginRight:10}}>
                             <img src={parkIcon} style={{padding:5}}/>
-                          </Button>
-                          <Button shape="circle" style={{marginRight:10}}>
+                          </ButtonAntd>
+                          <ButtonAntd shape="circle" style={{marginRight:10}}>
                             <img src={pauseIcon} style={{padding:5}}/>
-                          </Button>
-                          <Button shape="circle" style={{marginRight:10}}>
+                          </ButtonAntd>
+                          <ButtonAntd shape="circle" style={{marginRight:10}}>
                             <img src={forwardIcon} style={{padding:5}}/>
-                          </Button>
-                          <Button shape="circle" style={{marginRight:10}}>
+                          </ButtonAntd>
+                          <ButtonAntd shape="circle" style={{marginRight:10}}>
                             <img src={contactListIcon} style={{padding:5}}/>
-                          </Button>
+                          </ButtonAntd>
 
-                          <Button type="danger" shape="circle" style={{marginRight:10, marginLeft:30}}>
+                          <ButtonAntd type="danger" shape="circle" style={{marginRight:10, marginLeft:30}}>
                             <img src={endCallIcon} style={{padding:5}}/>
-                          </Button>
+                          </ButtonAntd>
                         </span>
                         
                       </div>
