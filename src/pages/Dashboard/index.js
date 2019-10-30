@@ -229,15 +229,15 @@ const options = dataSource
 
 const columns = [
   {
-    title: 'AGENT',
+    title: 'Agent',
     dataIndex: 'agent',
   },
   {
-    title: 'NAME',
+    title: 'Name',
     dataIndex: 'name',
   },
   {
-    title: 'EXT',
+    title: 'Ext',
     dataIndex: 'ext',
   },
 ];
@@ -289,15 +289,15 @@ const data = [
 
 const callStatusColumns = [
   {
-    title: 'NUMBER',
+    title: 'Number',
     dataIndex: 'number',
   },
   {
-    title: 'NAME',
+    title: 'Name',
     dataIndex: 'name',
   },
   {
-    title: 'DURATION',
+    title: 'Duration',
     dataIndex: 'duration',
   },
 ];
@@ -325,15 +325,15 @@ const callStatusData = [
 
 const callLogColumns = [
   {
-    title: 'DATE TIME',
+    title: 'Date Time',
     dataIndex: 'datetime',
   },
   {
-    title: 'FROM',
+    title: 'From',
     dataIndex: 'from',
   },
   {
-    title: 'TO',
+    title: 'To',
     dataIndex: 'to',
   },
 ];
