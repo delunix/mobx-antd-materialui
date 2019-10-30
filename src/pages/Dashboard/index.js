@@ -18,12 +18,17 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
+import Box from '@material-ui/core/Box';
+import { withStyles } from '@material-ui/core/styles';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import Avatar from '@material-ui/core/Avatar';
+
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
 
 import './dashboard.css';
-import { Button, Icon, Input, AutoComplete, Tabs, Table, Badge as BadgeAntd, Radio, Select } from 'antd';
+import { Button, Icon, Input, AutoComplete, Tabs, Table, Badge as BadgeAntd, Radio, Select, Divider as DividerAntd } from 'antd';
 
 import logo from '../../assets/the-hari-logo.png';
 import logoSquare from '../../assets/the-hari-logo-square.png';
@@ -42,6 +47,7 @@ import forwardIcon from '../../assets/icons/forward.png';
 import contactListIcon from '../../assets/icons/contact-list.png';
 import endCallIcon from '../../assets/icons/end-call.png';
 
+import avatarImg from '../../assets/1.jpg';
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -353,6 +359,34 @@ const callLogData = [
   }
 ];
 
+const StyledBadge2 = withStyles(theme => ({
+  badge: {
+    backgroundColor: '#44b700',
+    boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
+    '&::after': {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      borderRadius: '50%',
+      animation: '$ripple 1.2s infinite ease-in-out',
+      border: '1px solid #44b700',
+      content: '""',
+    },
+  },
+  '@keyframes ripple': {
+    '0%': {
+      transform: 'scale(.8)',
+      opacity: 1,
+    },
+    '100%': {
+      transform: 'scale(2.4)',
+      opacity: 0,
+    },
+  },
+}))(Badge);
+
 export default function DashboardPage() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
@@ -387,11 +421,43 @@ export default function DashboardPage() {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             <img src={logo} className="App-logo" alt="logo" style={{height: 17}}/>
           </Typography>
+
+          <div style={{marginRight:10, color:"gray"}}>
+            Wed, 30 Oct 2019
+          </div>
+
+          <DividerAntd type="vertical" />
+
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
             </Badge>
           </IconButton>
+
+          <DividerAntd type="vertical" />
+
+          <Box display="flex">
+            <Box m={1}>
+              <StyledBadge2
+                overlap="circle"
+                anchorOrigin={{
+                  vertical: 'bottom',
+                  horizontal: 'right',
+                }}
+                variant="dot"
+              >
+                <Avatar alt="Stock avatar" src={avatarImg} />
+              </StyledBadge2>
+            </Box>
+            <Box m={1}>
+              <div>
+                [Call Center] Mark Watson
+              </div>
+              <div style={{fontSize: 12}}>
+                Working
+              </div>
+            </Box>
+          </Box>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -508,7 +574,9 @@ export default function DashboardPage() {
                   <div>
                     <Radio.Group defaultValue="a" buttonStyle="solid">
                       <Radio.Button value="a">All</Radio.Button>
-                      <Radio.Button value="b">Notes</Radio.Button>
+                      <Radio.Button value="b">
+                        Notes
+                      </Radio.Button>
                       <Radio.Button value="c">Task</Radio.Button>
                       <Radio.Button value="d">Calls</Radio.Button>
                     </Radio.Group>
